@@ -1,0 +1,50 @@
+[
+  {
+    "title": "Add 'destructive' variant to Button component",
+    "description": "Extend the existing Button component to support a new 'destructive' variant with a red color scheme for dangerous actions.",
+    "details": "Edit 'components/ui/button.tsx'. Locate the buttonVariants (likely using cva) and add a 'destructive' variant. Use Tailwind CSS classes (e.g., 'bg-red-500 text-primary-foreground hover:bg-red-600') for base, hover, focus, and disabled states. Update the ButtonProps interface/type to accept 'destructive' as a valid variant. Ensure the new variant is consistent with the design system and accessible (sufficient color contrast).",
+    "status": "pending",
+    "test_strategy": "Manually verify the Button renders correctly with 'variant=\"destructive\"' in Storybook or a test page. Check all states (default, hover, focus, disabled) in both light and dark modes. Use a color contrast checker to ensure accessibility compliance.",
+    "priority": "high",
+    "ordinal": 0,
+    "task_group_id": "6152739b-d361-4b92-a072-e8218a4bcd8e",
+    "parent_task_id": null,
+    "ai_result": null,
+    "id": "0ed36dac-b65e-4943-be30-7b88e5136b1b",
+    "created_at": "2025-10-19T14:37:12.318248Z",
+    "user_id": "user_2yhesfpa5IDelC7UxShblIKQJIb",
+    "subtasks": []
+  },
+  {
+    "title": "Apply 'destructive' variant to landing page button",
+    "description": "Update the designated button on the landing page to use the new 'destructive' variant.",
+    "details": "In 'app/page.tsx', identify the target Button instance (e.g., a call-to-action or demo button) and set its 'variant' prop to 'destructive'. Ensure the button's purpose aligns with a destructive or high-attention action per design guidelines.",
+    "status": "pending",
+    "test_strategy": "Load the landing page and confirm the target button displays with the new red style. Verify the button's appearance and interaction states are consistent with the Button component's implementation.",
+    "priority": "medium",
+    "ordinal": 1,
+    "task_group_id": "6152739b-d361-4b92-a072-e8218a4bcd8e",
+    "parent_task_id": null,
+    "ai_result": null,
+    "id": "173ae92a-df5d-4a3e-85a6-79cf7d70d1f8",
+    "created_at": "2025-10-19T14:37:12.318252Z",
+    "user_id": "user_2yhesfpa5IDelC7UxShblIKQJIb",
+    "subtasks": []
+  },
+  {
+    "title": "Validate visual and accessibility compliance",
+    "description": "Ensure the new 'destructive' button variant meets visual, usability, and accessibility standards across supported themes and states.",
+    "details": "Test the destructive button in both light and dark modes, checking for color contrast, hover/focus/disabled states, and overall consistency. Use browser dev tools and accessibility checkers (e.g., axe, Lighthouse) to confirm WCAG 2.1 AA compliance. Adjust Tailwind classes if necessary to improve contrast or usability.",
+    "status": "pending",
+    "test_strategy": "Perform manual and automated accessibility checks. Use color contrast tools to validate compliance. Test keyboard navigation and screen reader labeling on the button.",
+    "priority": "high",
+    "ordinal": 2,
+    "task_group_id": "6152739b-d361-4b92-a072-e8218a4bcd8e",
+    "parent_task_id": null,
+    "ai_result": null,
+    "id": "31e9f29c-377e-4265-b799-2ac4141f92ee",
+    "created_at": "2025-10-19T14:37:12.318253Z",
+    "user_id": "user_2yhesfpa5IDelC7UxShblIKQJIb",
+    "subtasks": []
+  }
+]
