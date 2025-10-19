@@ -469,8 +469,8 @@ export function DataTable({
                 })}
             </DropdownMenuContent>
           </DropdownMenu>
-          <Button variant="outline" size="sm">
-            <IconPlus />
+          <Button variant="outline" size="sm" className="px-3 py-1.5 text-sm">
+            <IconPlus className="w-4 h-4" />
             <span className="hidden lg:inline">Add Section</span>
           </Button>
         </div>
