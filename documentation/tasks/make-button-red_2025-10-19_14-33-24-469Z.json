@@ -1,0 +1,50 @@
+[
+  {
+    "title": "Add 'destructive' variant to Button component",
+    "description": "Extend the shared Button component to support a new 'destructive' (red) variant using the cva system and Tailwind CSS.",
+    "details": "Open 'components/ui/button.tsx'. Locate the buttonVariants object defined with cva. Add a new 'destructive' variant with Tailwind classes for a red background (e.g., 'bg-red-500 hover:bg-red-500/90'), white text, and appropriate focus/disabled states. Update the ButtonProps TypeScript interface to include 'destructive' as a valid value for the variant prop. Ensure all interactive states are styled. If a suitable red is not present in the Tailwind config, add it to 'tailwind.config.ts'.",
+    "status": "pending",
+    "test_strategy": "Visually inspect the Button component in Storybook or a test page for the new 'destructive' variant. Confirm all states (default, hover, focus, disabled) render correctly. Use a color contrast checker to ensure accessibility compliance (WCAG AA).",
+    "priority": "high",
+    "ordinal": 0,
+    "task_group_id": "06c35a41-f2f8-4dbf-87a1-83b4f25bfc5f",
+    "parent_task_id": null,
+    "ai_result": null,
+    "id": "cd5ece20-ac63-44f0-91be-b7a0fb1ae49a",
+    "created_at": "2025-10-19T14:33:07.895153Z",
+    "user_id": "user_2yhesfpa5IDelC7UxShblIKQJIb",
+    "subtasks": []
+  },
+  {
+    "title": "Apply 'destructive' variant to landing page CTA button",
+    "description": "Update the main call-to-action button on the landing page to use the new 'destructive' variant.",
+    "details": "In 'app/page.tsx', locate the primary CTA Button instance (e.g., 'Sign Up' or 'Get Started'). Add the prop variant=\"destructive\" to this Button. Ensure the change is scoped only to the intended button and does not affect other buttons on the page.",
+    "status": "pending",
+    "test_strategy": "Load the landing page and verify the CTA button displays with the new red style. Confirm no other buttons are unintentionally affected. Compare before-and-after screenshots for review.",
+    "priority": "medium",
+    "ordinal": 1,
+    "task_group_id": "06c35a41-f2f8-4dbf-87a1-83b4f25bfc5f",
+    "parent_task_id": null,
+    "ai_result": null,
+    "id": "208598c2-766f-4ea8-900b-151f24a677a2",
+    "created_at": "2025-10-19T14:33:07.895167Z",
+    "user_id": "user_2yhesfpa5IDelC7UxShblIKQJIb",
+    "subtasks": []
+  },
+  {
+    "title": "Validate accessibility and visual consistency",
+    "description": "Ensure the new button variant meets accessibility and design standards across devices and themes.",
+    "details": "Check the red button's color contrast against its text using an accessibility tool (e.g., axe, Lighthouse). Test the button in both light and dark mode to ensure visual consistency. Adjust Tailwind classes or color definitions if needed to meet WCAG 2.1 AA standards.",
+    "status": "pending",
+    "test_strategy": "Run automated accessibility checks (axe, Lighthouse) and manual keyboard navigation tests. Review the button in both light and dark themes on multiple devices/screen sizes.",
+    "priority": "high",
+    "ordinal": 2,
+    "task_group_id": "06c35a41-f2f8-4dbf-87a1-83b4f25bfc5f",
+    "parent_task_id": null,
+    "ai_result": null,
+    "id": "3f116fc7-8652-4599-8b01-c83732ea16d2",
+    "created_at": "2025-10-19T14:33:07.895171Z",
+    "user_id": "user_2yhesfpa5IDelC7UxShblIKQJIb",
+    "subtasks": []
+  }
+]
