@@ -1,0 +1,50 @@
+[
+  {
+    "title": "Verify Accessibility and Design Consistency",
+    "description": "Ensure the new red button meets accessibility standards and aligns with the application's design language.",
+    "details": "Check that the red background provides sufficient color contrast with the button text (WCAG 2.1 AA compliance). Review the button in both light and dark modes to ensure legibility. Confirm with the design/product team that using red for a 'create' action is appropriate, or document the decision if already approved.",
+    "status": "pending",
+    "test_strategy": "Use browser accessibility tools (e.g., Lighthouse, axe) to check color contrast. Manually review the button in both light and dark themes. Document any design feedback or approvals.",
+    "priority": "medium",
+    "ordinal": 1,
+    "task_group_id": "8b68a010-cd8f-403f-bbcd-a89c19ca381d",
+    "parent_task_id": null,
+    "ai_result": null,
+    "id": "07bdba15-7a61-4c99-ad49-8250e8aa0b35",
+    "created_at": "2025-10-19T14:37:16.165627Z",
+    "user_id": "user_2yhesfpa5IDelC7UxShblIKQJIb",
+    "subtasks": []
+  },
+  {
+    "title": "Perform Visual Regression and Functional Testing",
+    "description": "Test the dashboard to ensure the button's visual update did not introduce layout issues or break functionality.",
+    "details": "Run the application and visually inspect the dashboard for layout shifts or style conflicts. Use React Testing Library to confirm the button renders as expected and remains functional. Optionally, run an end-to-end test to verify the key creation flow is intact.",
+    "status": "pending",
+    "test_strategy": "Manual UI check, automated component test (React Testing Library), and optional e2e test for the key creation flow. Confirm no regressions or broken interactions.",
+    "priority": "medium",
+    "ordinal": 2,
+    "task_group_id": "8b68a010-cd8f-403f-bbcd-a89c19ca381d",
+    "parent_task_id": null,
+    "ai_result": null,
+    "id": "34d6e89e-cadb-42a2-9f28-399c4da04f1a",
+    "created_at": "2025-10-19T14:37:16.165629Z",
+    "user_id": "user_2yhesfpa5IDelC7UxShblIKQJIb",
+    "subtasks": []
+  },
+  {
+    "title": "Locate and Update 'Create New Key' Button Styling",
+    "description": "Identify the 'Create New Key' button in the dashboard and update its background color to red using Tailwind CSS, ensuring the change is visually correct and does not affect functionality.",
+    "details": "Open 'app/dashboard/page.tsx' and locate the <Button> component labeled 'Create New Key'. If the button uses a 'variant' prop (e.g., 'default'), either override the color using the 'className' prop with Tailwind classes (e.g., 'bg-red-600 hover:bg-red-700') or, if the red style will be reused, define a new variant in 'components/ui/button.tsx' and apply it. Ensure the button's hover and active states are also styled appropriately. Do not alter the button's logic or functionality.",
+    "status": "pending",
+    "test_strategy": "Visually inspect the dashboard to confirm the button is red and responds correctly to hover/active states. Use React Testing Library to verify the button renders and remains clickable. Confirm the key creation flow is unaffected.",
+    "priority": "high",
+    "ordinal": 0,
+    "task_group_id": "8b68a010-cd8f-403f-bbcd-a89c19ca381d",
+    "parent_task_id": null,
+    "ai_result": null,
+    "id": "e9d991eb-4dfa-468c-9e8b-3e7923d02edb",
+    "created_at": "2025-10-19T14:37:16.165618Z",
+    "user_id": "user_2yhesfpa5IDelC7UxShblIKQJIb",
+    "subtasks": []
+  }
+]
