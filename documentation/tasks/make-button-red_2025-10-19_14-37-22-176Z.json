@@ -1,0 +1,50 @@
+[
+  {
+    "title": "Update 'Create New Key' Button to Red Variant",
+    "description": "Change the color of the 'Create New Key' button on the dashboard page from blue to red using the existing 'destructive' variant in the shadcn/ui Button component.",
+    "details": "Locate the 'Create New Key' button instance in 'app/dashboard/page.tsx'. Update its usage to set the 'variant' prop to 'destructive', which applies the red styling as defined by the shadcn/ui Button component. Example: <Button variant=\"destructive\">Create New Key</Button>. Ensure no other logic or styling is affected.",
+    "status": "pending",
+    "test_strategy": "Manually verify in the browser that the button appears red and matches the 'destructive' variant styling. Check that the button's hover, focus, and active states are styled correctly. Confirm that no other buttons are affected.",
+    "priority": "high",
+    "ordinal": 0,
+    "task_group_id": "b145f679-b7cc-483c-94aa-c551d2c48bcc",
+    "parent_task_id": null,
+    "ai_result": null,
+    "id": "7227b876-376a-44f3-adf5-29900af416c0",
+    "created_at": "2025-10-19T14:37:11.871680Z",
+    "user_id": "user_2yhesfpa5IDelC7UxShblIKQJIb",
+    "subtasks": []
+  },
+  {
+    "title": "Verify Accessibility and Contrast Compliance",
+    "description": "Ensure the new red button meets accessibility standards for color contrast and usability.",
+    "details": "Use browser accessibility tools or online contrast checkers to confirm that the red background and white text of the button meet WCAG 2.1 AA contrast requirements. Verify that the button remains clearly visible and accessible in both light and dark modes.",
+    "status": "pending",
+    "test_strategy": "Run accessibility audits using browser dev tools (Lighthouse, axe) and manual checks for color contrast. Confirm keyboard navigation and focus ring visibility.",
+    "priority": "medium",
+    "ordinal": 1,
+    "task_group_id": "b145f679-b7cc-483c-94aa-c551d2c48bcc",
+    "parent_task_id": null,
+    "ai_result": null,
+    "id": "26826ec2-6d68-49b1-ac6c-77cac24865f7",
+    "created_at": "2025-10-19T14:37:11.871694Z",
+    "user_id": "user_2yhesfpa5IDelC7UxShblIKQJIb",
+    "subtasks": []
+  },
+  {
+    "title": "Perform Visual Regression and Functional Testing",
+    "description": "Validate that the button color change is visually correct and does not impact other UI elements or functionality.",
+    "details": "Manually inspect the dashboard page to ensure only the 'Create New Key' button is red. Optionally, use a visual regression tool or screenshot comparison to confirm no unintended UI changes. Test the button's functionality to ensure it still triggers the expected action.",
+    "status": "pending",
+    "test_strategy": "Manual visual inspection and functional click test. Optionally, run automated UI tests (if available) to assert the button's computed background color and behavior.",
+    "priority": "medium",
+    "ordinal": 2,
+    "task_group_id": "b145f679-b7cc-483c-94aa-c551d2c48bcc",
+    "parent_task_id": null,
+    "ai_result": null,
+    "id": "a1be84ba-d7ab-4659-aaa6-6a4025daafb1",
+    "created_at": "2025-10-19T14:37:11.871698Z",
+    "user_id": "user_2yhesfpa5IDelC7UxShblIKQJIb",
+    "subtasks": []
+  }
+]
