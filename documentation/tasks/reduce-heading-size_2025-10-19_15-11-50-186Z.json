@@ -1,0 +1,50 @@
+[
+  {
+    "title": "Locate and Update Heading Font Size",
+    "description": "Identify the 'codespace' heading in the dashboard and reduce its font size using Tailwind CSS classes.",
+    "details": "Open 'app/dashboard/page.tsx' and find the JSX element rendering the 'codespace' heading (likely an <h1> or <h2>). Check if the font size is set via a Tailwind CSS class (e.g., 'text-5xl'). Replace it with a smaller class (e.g., 'text-3xl' or 'text-4xl') that aligns with the project's design system. If the heading uses a shadcn/ui component, override the font size using the 'className' prop. Ensure the change is limited to the intended heading and does not affect other elements.",
+    "status": "pending",
+    "test_strategy": "Run the application locally and visually verify that the heading is smaller. Check the dashboard on desktop, tablet, and mobile to ensure the new size is appropriate and responsive. Confirm that the change does not break layout or accessibility.",
+    "priority": "high",
+    "ordinal": 0,
+    "task_group_id": "f5cc96a9-01d1-4da9-9a71-8c3094ba88ad",
+    "parent_task_id": null,
+    "ai_result": null,
+    "id": "745d9c68-d1ef-46a9-b5cb-39fcfb9d6677",
+    "created_at": "2025-10-19T15:11:40.458488Z",
+    "user_id": "user_2yhesfpa5IDelC7UxShblIKQJIb",
+    "subtasks": []
+  },
+  {
+    "title": "Verify Design Consistency and Accessibility",
+    "description": "Ensure the updated heading size maintains visual hierarchy, design consistency, and accessibility standards.",
+    "details": "Compare the new heading size with other headings and text elements in the dashboard to ensure it fits the established visual hierarchy. Use browser accessibility tools to check for adequate contrast and readability. Confirm that the heading remains keyboard accessible and screen-reader friendly.",
+    "status": "pending",
+    "test_strategy": "Use browser dev tools and accessibility checkers (e.g., Lighthouse, axe) to validate color contrast and semantic structure. Manually tab through the page to verify keyboard navigation. Optionally, review with a designer or use design tokens if available.",
+    "priority": "medium",
+    "ordinal": 1,
+    "task_group_id": "f5cc96a9-01d1-4da9-9a71-8c3094ba88ad",
+    "parent_task_id": null,
+    "ai_result": null,
+    "id": "65985c82-3ceb-4b38-80be-46542b49ca26",
+    "created_at": "2025-10-19T15:11:40.458497Z",
+    "user_id": "user_2yhesfpa5IDelC7UxShblIKQJIb",
+    "subtasks": []
+  },
+  {
+    "title": "Document and Submit Change for Review",
+    "description": "Prepare a pull request documenting the heading size change, including before-and-after screenshots for reviewer clarity.",
+    "details": "Create a concise commit message describing the change. In the pull request, include screenshots of the dashboard before and after the font size adjustment. Briefly explain the rationale for the new size and reference the relevant PRD section. Request review from a team member or designer if required by workflow.",
+    "status": "pending",
+    "test_strategy": "Ensure the pull request includes clear screenshots and a description. Confirm that reviewers can easily see and understand the change. Address any feedback received before merging.",
+    "priority": "medium",
+    "ordinal": 2,
+    "task_group_id": "f5cc96a9-01d1-4da9-9a71-8c3094ba88ad",
+    "parent_task_id": null,
+    "ai_result": null,
+    "id": "4a1b16c9-6fb8-43a4-9b28-ddf6aff4d63c",
+    "created_at": "2025-10-19T15:11:40.458500Z",
+    "user_id": "user_2yhesfpa5IDelC7UxShblIKQJIb",
+    "subtasks": []
+  }
+]
