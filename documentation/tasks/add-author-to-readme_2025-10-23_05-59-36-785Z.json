@@ -1,0 +1,50 @@
+[
+  {
+    "title": "Add Author Attribution to README.md",
+    "description": "Update the root README.md file to include the author's name and a link to their GitHub profile, ensuring proper credit and reference for future contributors.",
+    "details": "Open the README.md file located at the root of the repository. Add an 'Author' or 'Credits' section, or append the information to the introduction, following standard Markdown formatting. Include the author's name as 'RafiulM' and hyperlink it to https://github.com/RafiulM. Ensure the placement maintains document readability. Save the changes.",
+    "status": "pending",
+    "test_strategy": "Manually preview the updated README.md file in a Markdown viewer or on GitHub to verify that the author section is present, the formatting is correct, and the link directs to the correct GitHub profile.",
+    "priority": "medium",
+    "ordinal": 0,
+    "task_group_id": "8484d3e7-b17a-430f-a2b9-93b28a7a89a3",
+    "parent_task_id": null,
+    "ai_result": null,
+    "id": "a1a99fe9-94ab-4389-b870-22c3d780ecfc",
+    "created_at": "2025-10-23T05:59:24.198569Z",
+    "user_id": "user_2yhesfpa5IDelC7UxShblIKQJIb",
+    "subtasks": []
+  },
+  {
+    "title": "Commit and Push Documentation Update",
+    "description": "Commit the README.md change with a clear, conventional commit message and push the branch to the remote repository.",
+    "details": "Create a new branch from main (e.g., 'docs/add-author-attribution'). Stage and commit the README.md update using a message like 'docs: add author attribution to README'. Push the branch to the remote repository.",
+    "status": "pending",
+    "test_strategy": "Verify that the branch appears on the remote repository and that the commit message is clear and descriptive. Ensure only the intended changes are included in the commit.",
+    "priority": "medium",
+    "ordinal": 1,
+    "task_group_id": "8484d3e7-b17a-430f-a2b9-93b28a7a89a3",
+    "parent_task_id": null,
+    "ai_result": null,
+    "id": "eaeaf24c-458d-437c-b320-437c448765f8",
+    "created_at": "2025-10-23T05:59:24.198590Z",
+    "user_id": "user_2yhesfpa5IDelC7UxShblIKQJIb",
+    "subtasks": []
+  },
+  {
+    "title": "Open Pull Request for Review",
+    "description": "Open a pull request to merge the author attribution update into the main branch, following repository contribution guidelines.",
+    "details": "Navigate to the repository on GitHub. Open a pull request from the feature branch to main, providing a concise description of the change. Request review from relevant team members if required.",
+    "status": "pending",
+    "test_strategy": "Confirm that the pull request displays only the intended README.md change and that the description is clear. Ensure reviewers are notified as per project workflow.",
+    "priority": "medium",
+    "ordinal": 2,
+    "task_group_id": "8484d3e7-b17a-430f-a2b9-93b28a7a89a3",
+    "parent_task_id": null,
+    "ai_result": null,
+    "id": "6ee8e2b9-9f5a-459d-b440-9cb3f3716c04",
+    "created_at": "2025-10-23T05:59:24.198595Z",
+    "user_id": "user_2yhesfpa5IDelC7UxShblIKQJIb",
+    "subtasks": []
+  }
+]
