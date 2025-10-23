@@ -1,117 +1,84 @@
-# Project Requirements Document: codeguide-starter
-
----
+# Project Requirements Document (PRD)
 
 ## 1. Project Overview
 
-The **codeguide-starter** project is a boilerplate web application that provides a ready-made foundation for any web project requiring secure user authentication and a post-login dashboard. It sets up the common building blocks—sign-up and sign-in pages, API routes to handle registration and login, and a simple dashboard interface driven by static data. By delivering this skeleton, it accelerates development time and ensures best practices are in place from day one.
+CodeGuide is a full-stack web application starter and a custom landing page built on Next.js 15. It gives developers a ready-made marketing front end and a secure user-only back end so they can launch the CodeGuide service quickly. On the public side, visitors see a modern, multi-section landing page (Hero, Features, Testimonials, Pricing, etc.) that’s fully customizable. Once they sign up, they’re taken to a protected dashboard where the core CodeGuide app lives.
 
-This starter kit is being built to solve the friction developers face when setting up repeated common tasks: credential handling, session management, page routing, and theming. Key objectives include: 1) delivering a fully working authentication flow (registration & login), 2) providing a gated dashboard area upon successful login, 3) establishing a clear, maintainable project structure using Next.js and TypeScript, and 4) demonstrating a clean theming approach with global and section-specific CSS. Success is measured by having an end-to-end login journey in under 200 lines of code and zero runtime type errors.
-
----
+We’re building this template to eliminate repetitive setup work and let the team focus on CodeGuide’s unique features. Success means any new project can spin up a polished landing page, authentication flow, database integration, dark mode, and a basic dashboard in minutes—not days. Key objectives include: fast time to first deployment, a consistent UI/UX, and a secure, scalable foundation for future features.
 
 ## 2. In-Scope vs. Out-of-Scope
 
-### In-Scope (Version 1)
-- User registration (sign-up) form with validation
-- User login (sign-in) form with validation
-- Next.js API routes under `/api/auth/route.ts` handling:
-  - Credential validation
-  - Password hashing (e.g., bcrypt)
-  - Session creation or JWT issuance
-- Protected dashboard pages under `/dashboard`:
-  - `layout.tsx` wrapping dashboard content
-  - `page.tsx` rendering static data from `data.json`
-- Global application layout in `/app/layout.tsx`
-- Basic styling via `globals.css` and `dashboard/theme.css`
-- TypeScript strict mode enabled
+**In-Scope (v1)**
+- A public landing page scaffold with customizable Hero, Features, Testimonials, Pricing sections.
+- Authentication flow: sign-up, sign-in, session management via Better Auth.
+- Protected dashboard (at `/dashboard`) displaying skeleton charts/tables.
+- PostgreSQL integration using Drizzle ORM with basic `User` schema.
+- Dark mode toggle and responsive design via Tailwind CSS.
+- Docker configuration for local development and production deployment.
+- UI component library (`shadcn/ui`) with ready-made buttons, cards, inputs, etc.
+- Middleware to guard private routes.
 
-### Out-of-Scope (Later Phases)
-- Integration with a real database (PostgreSQL, MongoDB, etc.)
-- Advanced authentication flows (password reset, email verification, MFA)
-- Role-based access control (RBAC)
-- Multi-tenant or white-label theming
-- Unit, integration, or end-to-end testing suites
-- CI/CD pipeline and production deployment scripts
-
----
+**Out-of-Scope (Phase 2 or later)**
+- Social login providers (Google, GitHub) and password reset flows.
+- Email verification or multi-factor authentication.
+- Real data models beyond `User` (e.g., content CMS integration).
+- Advanced analytics or real-time collaboration features.
+- Automated testing or CI/CD pipelines (unit tests, e2e tests).
+- Third-party API integrations (payment gateways, CRMs).
 
 ## 3. User Flow
 
-A new visitor lands on the root URL and sees a welcome page with options to **Sign Up** or **Sign In**. If they choose Sign Up, they fill in their email, password, and hit “Create Account.” The form submits to `/api/auth/route.ts`, which hashes the password, creates a new user session or token, and redirects them to the dashboard. If any input is invalid, an inline error message explains the issue (e.g., “Password too short”).
+A new visitor lands on the public landing page (`app/page.tsx`). They scroll through the Hero section, read about features, check testimonials, and compare pricing cards. Once convinced, they click the “Sign Up” button in the header or at the bottom of a section. That action loads the Next.js page at `/sign-up`, where they fill out the form and submit it.
 
-Once authenticated, the user is taken to the `/dashboard` route. Here they see a sidebar or header defined by `dashboard/layout.tsx`, and the main panel pulls in static data from `data.json`. They can log out (if that control is present), but otherwise their entire session is managed by server-side cookies or tokens. Returning users go directly to Sign In, submit credentials, and upon success they land back on `/dashboard`. Any unauthorized access to `/dashboard` redirects back to Sign In.
-
----
+After successful sign-up, Better Auth redirects the user to the protected dashboard (`/dashboard`). Here, they see a navigation sidebar with links to any future CodeGuide modules and a main content area showing sample charts and tables. The theme toggle in the header lets them switch between light and dark modes. Throughout the session, the app keeps them authenticated and guards routes via middleware.
 
 ## 4. Core Features
 
-- **Sign-Up Page (`/app/sign-up/page.tsx`)**: Form fields for email & password, client-side validation, POST to `/api/auth`.
-- **Sign-In Page (`/app/sign-in/page.tsx`)**: Form fields for email & password, client-side validation, POST to `/api/auth`.
-- **Authentication API (`/app/api/auth/route.ts`)**: Handles both registration and login based on HTTP method, integrates password hashing (bcrypt) and session or JWT logic.
-- **Global Layout (`/app/layout.tsx` + `globals.css`)**: Shared header, footer, and CSS resets across all pages.
-- **Dashboard Layout (`/app/dashboard/layout.tsx` + `dashboard/theme.css`)**: Sidebar or top nav for authenticated flows, section-specific styling.
-- **Dashboard Page (`/app/dashboard/page.tsx`)**: Reads `data.json`, renders it as cards or tables.
-- **Static Data Source (`/app/dashboard/data.json`)**: Example dataset to demo dynamic rendering.
-- **TypeScript Configuration**: `tsconfig.json` with strict mode and path aliases (if any).
-
----
+- **Landing Page Sections**: Modular React components for Hero, Features, Testimonials, Pricing.
+- **Authentication**: Sign-up, sign-in, sign-out, session management using Better Auth.
+- **Protected Dashboard**: Basic stub with charts/tables, accessible only to logged-in users.
+- **Database Layer**: Drizzle ORM setup for PostgreSQL, including a `users` table and migrations.
+- **UI Components**: `shadcn/ui` library integrated with Tailwind CSS for buttons, cards, forms.
+- **Dark Mode**: Persistent light/dark theme toggle stored in cookies or local storage.
+- **Routing & Middleware**: Next.js App Router with middleware to redirect unauthenticated users.
+- **Deployment**: Dockerfile and `docker-compose.yml` for containerized builds and easy deployment.
 
 ## 5. Tech Stack & Tools
 
-- **Framework**: Next.js (App Router) for file-based routing, SSR/SSG, and API routes.
-- **Language**: TypeScript for type safety.
-- **UI Library**: React 18 for component-based UI.
-- **Styling**: Plain CSS via `globals.css` (global reset) and `theme.css` (sectional styling). Can easily migrate to CSS Modules or Tailwind in the future.
-- **Backend**: Node.js runtime provided by Next.js API routes.
-- **Password Hashing**: bcrypt (npm package).
-- **Session/JWT**: NextAuth.js or custom JWT logic (to be decided in implementation).
-- **IDE & Dev Tools**: VS Code with ESLint, Prettier extensions. Optionally, Cursor.ai for AI-assisted coding.
+- **Frontend**: Next.js 15 (App Router), React, TypeScript
+- **Styling**: Tailwind CSS, `shadcn/ui` custom component library
+- **Backend & API**: Next.js API Routes, Better Auth library for authentication
+- **Database**: PostgreSQL, Drizzle ORM for type-safe queries
+- **Containerization**: Docker, Docker Compose
+- **Dev Tools**: VS Code (any IDE), Tailwind CLI, Node.js v18+
+- **Testing (future)**: Jest/React Testing Library, Playwright or Cypress
 
----
+_No AI models are currently integrated; none are required for v1._
 
 ## 6. Non-Functional Requirements
 
-- **Performance**: Initial page load under 200 ms on a standard broadband connection. API responses under 300 ms.
-- **Security**:
-  - HTTPS only in production.
-  - Proper CORS, CSRF protection for API routes.
-  - Secure password storage (bcrypt with salt).
-  - No credentials or secrets checked into version control.
-- **Scalability**: Structure must support adding database integration, caching layers, and advanced auth flows without rewiring core app.
-- **Usability**: Forms should give real-time feedback on invalid input. Layout must be responsive (mobile > 320 px).
-- **Maintainability**: Code must adhere to TypeScript strict mode. Linting & formatting enforced by ESLint/Prettier.
-
----
+- **Performance**: Initial load under 2 seconds on 3G; core pages should hydrate in under 1 second.
+- **Scalability**: Able to handle 1,000 simultaneous users with horizontal scaling in production.
+- **Security**: All traffic via HTTPS; follow OWASP Top 10 best practices; secure cookies; protect API routes.
+- **Accessibility**: WCAG 2.1 AA compliance for color contrast, keyboard navigation, ARIA roles.
+- **SEO**: Metadata (title, description, Open Graph tags) on landing page for social sharing; SSG/SSR for indexable content.
+- **Usability**: Responsive design across mobile, tablet, and desktop. Dark mode switch persisted between visits.
 
 ## 7. Constraints & Assumptions
 
-- **No Database**: Dashboard uses only `data.json`; real database integration is deferred.
-- **Node Version**: Requires Node.js >= 14.
-- **Next.js Version**: Built on Next.js 13+ App Router.
-- **Authentication**: Assumes availability of bcrypt or NextAuth.js at implementation time.
-- **Hosting**: Targets serverless or Node.js-capable hosting (e.g., Vercel, Netlify).
-- **Browser Support**: Modern evergreen browsers; no IE11 support required.
-
----
+- Must run on Node.js 18+ and a PostgreSQL 14+ database.
+- Better Auth library compatible with Next.js 15 App Router.
+- Drizzle ORM supports all required database operations without custom SQL.
+- Docker is available for all developers and CI environments.
+- Users have modern browsers (Chrome, Firefox, Safari, Edge) with ES2020 support.
+- No third-party payment or messaging services required in v1.
 
 ## 8. Known Issues & Potential Pitfalls
 
-- **Static Data Limitation**: `data.json` is only for demo. A real API or database will be needed to avoid stale data.
-  *Mitigation*: Define a clear interface for data fetching so swapping to a live endpoint is trivial.
+- **API Rate Limits**: If Better Auth enforces rate limits, implement retry logic or server-side caching.
+- **Drizzle Migrations**: Ensure migrations run correctly in CI/CD; version-pin Drizzle to avoid breaking changes.
+- **Tailwind Purge**: Misconfigured purging can remove unused CSS classes. Verify `tailwind.config.js` paths include all JSX/TSX files.
+- **Next.js App Router Stability**: Next.js 15 is new; monitor upgrade notes and pin dependencies to minor versions.
+- **Docker Overhead**: Container startup times can slow dev feedback loops—use hot-reload mount volumes.
 
-- **Global CSS Conflicts**: Using global styles can lead to unintended overrides.
-  *Mitigation*: Plan to migrate to CSS Modules or utility-first CSS in Phase 2.
-
-- **API Route Ambiguity**: Single `/api/auth/route.ts` handling both sign-up and sign-in could get complex.
-  *Mitigation*: Clearly branch on HTTP method (`POST /register` vs. `POST /login`) or split into separate files.
-
-- **Lack of Testing**: No test suite means regressions can slip in.
-  *Mitigation*: Build a minimal Jest + React Testing Library setup in an early iteration.
-
-- **Error Handling Gaps**: Client and server must handle edge cases (network failures, malformed input).
-  *Mitigation*: Define a standard error response schema and show user-friendly messages.
-
----
-
-This PRD should serve as the single source of truth for the AI model or any developer generating the next set of technical documents: Tech Stack Doc, Frontend Guidelines, Backend Structure, App Flow, File Structure, and IDE Rules. It contains all functional and non-functional requirements with no ambiguity, enabling seamless downstream development.
+By following this PRD, the AI and development team can generate subsequent technical documents—Tech Stack details, Frontend Guidelines, Backend Architecture, File Structure, and CI/CD setup—without ambiguity or missing information.

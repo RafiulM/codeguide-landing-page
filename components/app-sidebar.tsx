@@ -14,6 +14,7 @@ import {
   IconFileWord,
   IconFolder,
   IconHelp,
+  IconKey,
   IconListDetails,
   IconReport,
   IconSearch,
@@ -113,9 +114,9 @@ const staticData = {
   ],
   navSecondary: [
     {
-      title: "Settings",
-      url: "#",
-      icon: IconSettings,
+      title: "API Keys",
+      url: "/dashboard/settings/api-keys",
+      icon: IconKey,
     },
     {
       title: "Get Help",
