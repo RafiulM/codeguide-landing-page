@@ -1,0 +1,50 @@
+[
+  {
+    "title": "Create Hero Section Component",
+    "description": "Develop a new, self-contained React component for the Hero Section, encapsulating headline, sub-headline, and CTA button.",
+    "details": "Create a new file at `components/hero-section.tsx`. Use semantic HTML elements such as <section>, <h1>, and <p> for structure. Import and use the Button component from `components/ui/button.tsx` for the CTA. Wrap the Button in a Next.js <Link> component pointing to '/sign-up'. Apply Tailwind CSS utility classes for layout, spacing, color, and responsiveness. Ensure accessibility with proper ARIA roles and keyboard navigation. Optionally, include a visually appealing background or illustration, optimized for performance.",
+    "status": "pending",
+    "test_strategy": "Unit test: Render the component and verify the presence of the headline, sub-headline, and CTA button. Accessibility test: Ensure the CTA is focusable and has appropriate ARIA labels. Responsiveness: Use Storybook or browser dev tools to verify layout across breakpoints.",
+    "priority": "high",
+    "ordinal": 0,
+    "task_group_id": "0b621129-9e8c-45a7-bc9a-66b67153d78c",
+    "parent_task_id": null,
+    "ai_result": null,
+    "id": "2e6bf991-dbae-438a-8e5f-7a6f00ec7dcd",
+    "created_at": "2025-10-23T11:40:40.019712Z",
+    "user_id": "user_2yhesfpa5IDelC7UxShblIKQJIb",
+    "subtasks": []
+  },
+  {
+    "title": "Integrate Hero Section into Landing Page",
+    "description": "Render the new Hero Section component at the top of the main landing page (`app/page.tsx`).",
+    "details": "Import the newly created HeroSection component into `app/page.tsx`. Place it as the first section in the page layout, above other landing page sections. Ensure the integration does not break existing layout or styling. Adjust spacing as needed to maintain visual hierarchy and consistency with the rest of the landing page.",
+    "status": "pending",
+    "test_strategy": "Manual test: Load the landing page and verify the Hero Section appears at the top and is styled correctly. Regression test: Ensure other landing page sections are unaffected.",
+    "priority": "medium",
+    "ordinal": 1,
+    "task_group_id": "0b621129-9e8c-45a7-bc9a-66b67153d78c",
+    "parent_task_id": null,
+    "ai_result": null,
+    "id": "5b4796d5-2c62-446b-a7e9-3a25cce405b4",
+    "created_at": "2025-10-23T11:40:40.019723Z",
+    "user_id": "user_2yhesfpa5IDelC7UxShblIKQJIb",
+    "subtasks": []
+  },
+  {
+    "title": "Validate Responsiveness and Accessibility",
+    "description": "Ensure the Hero Section is fully responsive and accessible across devices and input methods.",
+    "details": "Test the Hero Section on various screen sizes (mobile, tablet, desktop) using browser dev tools. Verify that text scales appropriately, the CTA remains prominent, and no content is clipped or misaligned. Check keyboard navigation and screen reader compatibility for the CTA and all interactive elements. Adjust Tailwind classes or HTML structure as needed to address any issues.",
+    "status": "pending",
+    "test_strategy": "Manual test: Use browser dev tools for responsive checks. Use keyboard and screen reader tools to validate accessibility. Fix any issues found.",
+    "priority": "medium",
+    "ordinal": 2,
+    "task_group_id": "0b621129-9e8c-45a7-bc9a-66b67153d78c",
+    "parent_task_id": null,
+    "ai_result": null,
+    "id": "6bdba863-18cc-41c2-a75e-3da2cb3de346",
+    "created_at": "2025-10-23T11:40:40.019726Z",
+    "user_id": "user_2yhesfpa5IDelC7UxShblIKQJIb",
+    "subtasks": []
+  }
+]

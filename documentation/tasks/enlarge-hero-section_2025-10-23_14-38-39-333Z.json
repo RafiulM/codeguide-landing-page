@@ -1,0 +1,50 @@
+[
+  {
+    "title": "Enlarge Hero Section Container",
+    "description": "Increase the vertical height and visual prominence of the hero section on the landing page.",
+    "details": "Edit the main hero section container in `app/page.tsx`. Use Tailwind CSS utility classes to increase vertical padding (e.g., change from `py-24` to `py-48`) or set a minimum height (e.g., `min-h-[75vh]`). Ensure the container remains centered and visually balanced. Apply responsive breakpoints to prevent excessive height on mobile devices (e.g., use `md:py-48` and smaller values for `py` on mobile).",
+    "status": "pending",
+    "test_strategy": "Visually inspect the landing page on desktop, tablet, and mobile viewports to confirm the hero section is larger and remains responsive. Check for layout shifts and ensure no content is cut off or overlaps. Compare before/after screenshots for visual regression.",
+    "priority": "high",
+    "ordinal": 0,
+    "task_group_id": "af78db17-4d29-48a8-8854-e8930e0087a7",
+    "parent_task_id": null,
+    "ai_result": null,
+    "id": "de92682e-c2a2-42c6-86f6-8dd3a11f23d9",
+    "created_at": "2025-10-23T14:38:25.819991Z",
+    "user_id": "user_2yhesfpa5IDelC7UxShblIKQJIb",
+    "subtasks": []
+  },
+  {
+    "title": "Scale Up Hero Section Typography and CTA",
+    "description": "Increase the font sizes of the hero headline, sub-headline, and call-to-action button to match the enlarged container.",
+    "details": "Within the hero section in `app/page.tsx`, adjust the Tailwind CSS classes for the main heading (`h1`), subheading (`p`), and CTA button. For example, increase `h1` to `text-5xl` or larger, subheading to `text-xl` or `text-2xl`, and ensure the button uses appropriate sizing classes (e.g., `px-8 py-4 text-lg`). Maintain a clear visual hierarchy and accessibility (sufficient contrast, readable font sizes).",
+    "status": "pending",
+    "test_strategy": "Visually verify that all text and the CTA button scale proportionally with the hero section. Confirm readability and accessibility (sufficient contrast, no text overflow). Test with screen readers to ensure headings remain semantically correct.",
+    "priority": "high",
+    "ordinal": 1,
+    "task_group_id": "af78db17-4d29-48a8-8854-e8930e0087a7",
+    "parent_task_id": null,
+    "ai_result": null,
+    "id": "a571f277-a177-4807-89c8-9ebc2d6ad3d5",
+    "created_at": "2025-10-23T14:38:25.820001Z",
+    "user_id": "user_2yhesfpa5IDelC7UxShblIKQJIb",
+    "subtasks": []
+  },
+  {
+    "title": "Validate Responsiveness and Accessibility",
+    "description": "Ensure the enlarged hero section and its contents are responsive and accessible across all supported devices and browsers.",
+    "details": "Test the updated hero section using browser developer tools and real devices. Adjust Tailwind responsive classes as needed to optimize appearance on mobile, tablet, and desktop. Check color contrast, keyboard navigation, and ARIA roles. Update or add Tailwind classes to maintain WCAG 2.1 AA compliance.",
+    "status": "pending",
+    "test_strategy": "Perform manual responsive testing on Chrome, Firefox, Safari, and Edge. Use accessibility tools (e.g., Lighthouse, axe) to check for color contrast and keyboard navigation. Confirm that the hero section adapts gracefully to all screen sizes and remains accessible.",
+    "priority": "medium",
+    "ordinal": 2,
+    "task_group_id": "af78db17-4d29-48a8-8854-e8930e0087a7",
+    "parent_task_id": null,
+    "ai_result": null,
+    "id": "70348d74-e857-4f74-ae09-a44364ee502f",
+    "created_at": "2025-10-23T14:38:25.820003Z",
+    "user_id": "user_2yhesfpa5IDelC7UxShblIKQJIb",
+    "subtasks": []
+  }
+]
