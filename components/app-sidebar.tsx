@@ -11,6 +11,7 @@ import {
   IconDatabase,
   IconFileAi,
   IconFileDescription,
+  IconFileText,
   IconFileWord,
   IconFolder,
   IconHelp,
@@ -138,6 +139,11 @@ const staticData = {
       name: "Reports",
       url: "#",
       icon: IconReport,
+    },
+    {
+      name: "Tech Spec",
+      url: "#",
+      icon: IconFileText,
     },
     {
       name: "Word Assistant",
