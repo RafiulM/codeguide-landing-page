@@ -1,0 +1,34 @@
+[
+  {
+    "title": "Update '+ Follow-up Task' Button Color to Red",
+    "description": "Change the background color of the '+ Follow-up Task' button in the dashboard from orange to red using Tailwind CSS utility classes, ensuring semantic correctness and accessibility.",
+    "details": "Locate the '+ Follow-up Task' <Button> component instance in 'app/dashboard/page.tsx'. Replace any existing background color classes (e.g., 'bg-orange-500') with 'bg-red-600 hover:bg-red-700 text-white'. Do not use the 'destructive' variant, as this action is not destructive. Ensure the new classes override any default or variant-based styles. Update hover and focus states for visual consistency.",
+    "status": "pending",
+    "test_strategy": "Manually verify the button displays with a red background in both light and dark modes. Check hover and focus states. Use a color contrast analyzer to ensure the red background and white text meet WCAG 2.1 AA contrast ratio (≥4.5:1).",
+    "priority": "high",
+    "ordinal": 0,
+    "task_group_id": "a8b96459-92a5-477f-9b7a-88aa946e2a6e",
+    "parent_task_id": null,
+    "ai_result": null,
+    "id": "d9b70792-4535-4bb7-b75c-2298e7b9f68c",
+    "created_at": "2025-10-23T06:29:16.604828Z",
+    "user_id": "user_2yhesfpa5IDelC7UxShblIKQJIb",
+    "subtasks": []
+  },
+  {
+    "title": "Verify Accessibility and Visual Consistency",
+    "description": "Ensure the updated button color meets accessibility standards and maintains visual consistency across themes and states.",
+    "details": "Use a color contrast analyzer tool to check that the red background and white text achieve at least a 4.5:1 contrast ratio. Test the button in both light and dark modes. Confirm that hover, focus, and active states are visually distinct and accessible. Adjust color shades if necessary to meet guidelines.",
+    "status": "pending",
+    "test_strategy": "Perform accessibility checks using tools like axe or Lighthouse. Manually inspect the button in all states and themes. Document results and adjust colors if needed.",
+    "priority": "high",
+    "ordinal": 1,
+    "task_group_id": "a8b96459-92a5-477f-9b7a-88aa946e2a6e",
+    "parent_task_id": null,
+    "ai_result": null,
+    "id": "bf099250-8fd3-4f02-ba2d-78f4925f9b46",
+    "created_at": "2025-10-23T06:29:16.604842Z",
+    "user_id": "user_2yhesfpa5IDelC7UxShblIKQJIb",
+    "subtasks": []
+  }
+]

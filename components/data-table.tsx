@@ -469,9 +469,9 @@ export function DataTable({
                 })}
             </DropdownMenuContent>
           </DropdownMenu>
-          <Button variant="outline" size="sm">
+          <Button className="bg-red-600 hover:bg-red-700 focus:bg-red-700 text-white focus:ring-2 focus:ring-red-500 focus:ring-offset-2" size="sm">
             <IconPlus />
-            <span className="hidden lg:inline">Add Section</span>
+            <span className="hidden lg:inline">+ Follow-up Task</span>
           </Button>
         </div>
       </div>
