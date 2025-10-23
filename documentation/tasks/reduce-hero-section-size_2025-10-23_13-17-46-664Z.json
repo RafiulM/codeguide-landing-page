@@ -1,0 +1,50 @@
+[
+  {
+    "title": "Adjust Hero Section Container Sizing",
+    "description": "Reduce the vertical height of the hero section by modifying container padding and height classes in app/page.tsx.",
+    "details": "Locate the hero section container in app/page.tsx. Identify Tailwind CSS classes controlling vertical spacing (e.g., min-h-screen, py-24). Replace with smaller values such as min-h-[80vh], py-16, or use responsive classes (e.g., md:py-20) to ensure optimal appearance across breakpoints. Ensure the hero section remains visually prominent but allows more content below the fold to be visible on initial load.",
+    "status": "pending",
+    "test_strategy": "Visually inspect the landing page on desktop, tablet, and mobile viewports to confirm the hero section is shorter and that content below is more visible. Verify no overflow or layout issues are introduced.",
+    "priority": "high",
+    "ordinal": 0,
+    "task_group_id": "35f607e0-3b34-4581-9cde-f2a3c96d7096",
+    "parent_task_id": null,
+    "ai_result": null,
+    "id": "658cd76f-6722-49f1-9039-b065c8b45082",
+    "created_at": "2025-10-23T13:17:30.416959Z",
+    "user_id": "user_2yhesfpa5IDelC7UxShblIKQJIb",
+    "subtasks": []
+  },
+  {
+    "title": "Reduce Hero Section Typography and Spacing",
+    "description": "Adjust font sizes and internal spacing within the hero section to further decrease its vertical footprint while maintaining readability and hierarchy.",
+    "details": "Within the hero section markup in app/page.tsx, lower the font size utilities for the main heading and subheading (e.g., text-6xl to text-5xl or text-4xl). Reduce vertical margins (e.g., mb-8 to mb-4) and spacing between elements as appropriate. Use responsive Tailwind classes to ensure text remains legible and visually balanced on all devices.",
+    "status": "pending",
+    "test_strategy": "Check that headings and subheadings remain readable and visually appealing at all breakpoints. Confirm that reduced spacing does not cause elements to overlap or crowd each other.",
+    "priority": "medium",
+    "ordinal": 1,
+    "task_group_id": "35f607e0-3b34-4581-9cde-f2a3c96d7096",
+    "parent_task_id": null,
+    "ai_result": null,
+    "id": "cf156dc6-e069-48c0-84cd-e13c65b595e4",
+    "created_at": "2025-10-23T13:17:30.416974Z",
+    "user_id": "user_2yhesfpa5IDelC7UxShblIKQJIb",
+    "subtasks": []
+  },
+  {
+    "title": "Validate Responsiveness and Accessibility",
+    "description": "Test the updated hero section for responsiveness and accessibility compliance across all supported devices and browsers.",
+    "details": "After styling changes, use browser dev tools and accessibility checkers to verify the hero section adapts correctly to different screen sizes (mobile, tablet, desktop, large desktop). Ensure color contrast, font sizes, and touch targets meet WCAG 2.1 AA standards. Confirm that keyboard navigation and ARIA roles are unaffected by the changes.",
+    "status": "pending",
+    "test_strategy": "Perform manual and automated accessibility checks (e.g., Lighthouse, axe). Test on Chrome, Firefox, Safari, and Edge. Validate that the hero section remains usable and visually consistent across all breakpoints.",
+    "priority": "medium",
+    "ordinal": 2,
+    "task_group_id": "35f607e0-3b34-4581-9cde-f2a3c96d7096",
+    "parent_task_id": null,
+    "ai_result": null,
+    "id": "6a36f51f-4b9b-4e9c-821a-622133510457",
+    "created_at": "2025-10-23T13:17:30.416978Z",
+    "user_id": "user_2yhesfpa5IDelC7UxShblIKQJIb",
+    "subtasks": []
+  }
+]
