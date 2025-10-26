@@ -1,0 +1,18 @@
+[
+  {
+    "title": "Add Author Attribution to README.md",
+    "description": "Update the README.md file to include a clear and prominent 'Author' section crediting the original creator, RafiulM, with a hyperlink to their GitHub profile.",
+    "details": "Open the README.md file located at the root of the repository. Add a new section titled 'Author' or 'Acknowledgments' using an H2 (##) or H3 (###) markdown heading. Under this section, write: 'This project was created by [RafiulM](https://github.com/RafiulM).' Ensure the markdown syntax for the hyperlink is correct and the section is placed in a logical location (typically near the end of the file, after other content such as license or contribution guidelines). Save the file after making the changes.",
+    "status": "pending",
+    "test_strategy": "Preview the updated README.md in a markdown viewer (such as GitHub's web interface) to confirm the new section is visible, the hyperlink is correctly formatted, and the attribution is clear. No automated or functional testing is required.",
+    "priority": "high",
+    "ordinal": 0,
+    "task_group_id": "50a80daf-7f2b-40fc-971b-531e3efcd003",
+    "parent_task_id": null,
+    "ai_result": null,
+    "id": "75c57906-55f6-4cf2-9c37-bb223a32d379",
+    "created_at": "2025-10-26T07:57:19.806448Z",
+    "user_id": "user_2yhesfpa5IDelC7UxShblIKQJIb",
+    "subtasks": []
+  }
+]
