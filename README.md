@@ -326,4 +326,20 @@ This starter is optimized for AI coding agents:
 ## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
+
+## Author
+
+This project was created and is maintained by **[RafiulM](https://github.com/RafiulM)**.
+
+RafiulM is passionate about building modern web applications and creating developer-friendly tools that streamline the development process. This starter template represents a commitment to best practices, cutting-edge technology, and exceptional developer experience.
+
+Feel free to connect, collaborate, or provide feedback through:
+- 🐛 [Report Issues](https://github.com/RafiulM/codeguide-starter-fullstack/issues)
+- 💡 [Feature Requests](https://github.com/RafiulM/codeguide-starter-fullstack/issues)
+- 🤝 [Contributions](https://github.com/RafiulM/codeguide-starter-fullstack/pulls)
+
+---
+
+**⭐ If you find this project helpful, consider giving it a star on GitHub!**
+
 # codeguide-starter-fullstack
