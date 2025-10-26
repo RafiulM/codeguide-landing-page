@@ -1,0 +1,18 @@
+[
+  {
+    "title": "Add Author Section to README.md",
+    "description": "Update the root README.md file to include an 'Author' section attributing the project to 'RafiulM'.",
+    "details": "Open the README.md file located in the root directory of the repository. Add a new section titled '## Author' or '## Credits' at a logical location (preferably at the end of the file or after the main description). Under this heading, add the line: 'Created by [RafiulM](https://github.com/RafiulM)'. Ensure proper Markdown formatting and that the link is correct.",
+    "status": "pending",
+    "test_strategy": "Preview the updated README.md file in a Markdown viewer or on the repository platform (e.g., GitHub) to verify that the 'Author' section appears correctly and the link to the author's profile works as intended.",
+    "priority": "medium",
+    "ordinal": 0,
+    "task_group_id": "11b783c3-9278-4523-9c9e-2923e21476d9",
+    "parent_task_id": null,
+    "ai_result": null,
+    "id": "e391360d-b0c7-47c7-a692-c931a9245c06",
+    "created_at": "2025-10-26T07:48:59.495156Z",
+    "user_id": "user_2yhesfpa5IDelC7UxShblIKQJIb",
+    "subtasks": []
+  }
+]
