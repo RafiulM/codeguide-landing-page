@@ -326,4 +326,9 @@ This starter is optimized for AI coding agents:
 ## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
+
+## Author
+
+Created by [RafiulM](https://github.com/RafiulM)
+
 # codeguide-starter-fullstack
