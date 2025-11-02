@@ -1,7 +1,7 @@
 "use client";
 
-import { useState } from "react";
-import { useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -14,6 +14,7 @@ import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { signUp } from "@/lib/auth-client";
 import { Loader2, Eye, EyeOff } from "lucide-react";
+import { getPlanById } from "@/lib/plans";
 
 const signUpSchema = z.object({
     name: z.string().min(2, "Name must be at least 2 characters"),
@@ -36,6 +37,17 @@ export default function SignUpPage() {
     const [showPassword, setShowPassword] = useState(false);
     const [showConfirmPassword, setShowConfirmPassword] = useState(false);
     const router = useRouter();
+    const searchParams = useSearchParams();
+    const selectedPlanId = searchParams.get("plan");
+    const selectedPlan = getPlanById(selectedPlanId);
+
+    useEffect(() => {
+        if (selectedPlanId) {
+            try {
+                localStorage.setItem("selectedPlanId", selectedPlanId);
+            } catch {}
+        }
+    }, [selectedPlanId]);
 
     const form = useForm<SignUpForm>({
         resolver: zodResolver(signUpSchema),
@@ -80,6 +92,11 @@ export default function SignUpPage() {
                     </CardDescription>
                 </CardHeader>
                 <CardContent>
+                    {selectedPlan && (
+                        <div className="mb-4 text-sm">
+                            <span className="font-medium">Selected plan:</span> {selectedPlan.name}
+                        </div>
+                    )}
                     <Form {...form}>
                         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
                             {error && (

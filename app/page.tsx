@@ -14,6 +14,7 @@ import {
 import { ThemeToggle } from "@/components/theme-toggle";
 import { AuthButtons, HeroAuthButtons } from "@/components/auth-buttons";
 import Image from "next/image";
+import { PricingSection } from "@/components/pricing-section";
 
 export default function Home() {
   return (
@@ -143,6 +144,8 @@ export default function Home() {
             </ul>
           </Card>
         </div>
+
+        <PricingSection />
 
         {/* Getting Started */}
         <Card className="p-6 bg-gradient-to-r from-slate-50 to-gray-50 dark:from-slate-900/50 dark:to-gray-900/50">
