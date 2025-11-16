@@ -1,0 +1,50 @@
+[
+  {
+    "title": "Draft Comprehensive README.md",
+    "description": "Create a detailed README.md file at the project root that documents the CodeGuide landing page repository for new developers.",
+    "details": "Write a new README.md file using Markdown. Structure it with the following sections: Project Title & Summary, Key Features, Technology Stack, Getting Started (prerequisites, installation, and local setup), Environment Variables (with explanations for each), and Deployment (including Docker instructions). Use clear, concise language and Markdown formatting for readability. Reference the .env.example file for environment variable documentation. Include links to official documentation for major technologies used (Next.js, Drizzle, Better Auth, etc.).",
+    "status": "pending",
+    "test_strategy": "Manually review the README for completeness, clarity, and formatting. Ensure all sections are present and instructions are unambiguous. Verify that environment variables are documented without exposing sensitive values.",
+    "priority": "high",
+    "ordinal": 0,
+    "task_group_id": "879b5824-44fb-4961-a127-1df04e90c8b2",
+    "parent_task_id": null,
+    "ai_result": null,
+    "id": "cace484c-ad1b-4d73-945c-6ccd42a10077",
+    "created_at": "2025-11-16T13:17:55.977217Z",
+    "user_id": "user_2yhesfpa5IDelC7UxShblIKQJIb",
+    "subtasks": []
+  },
+  {
+    "title": "Validate Setup Instructions",
+    "description": "Test the setup and run instructions in the new README.md to ensure they are accurate and complete.",
+    "details": "Perform a clean clone of the repository. Follow the README's instructions step-by-step: install dependencies, configure environment variables, run the development server, and (optionally) build and run with Docker. Note any missing steps, ambiguous instructions, or errors encountered.",
+    "status": "pending",
+    "test_strategy": "Successfully complete all steps as described in the README on a fresh environment. Confirm that the application starts and is accessible locally. Update README if discrepancies are found.",
+    "priority": "high",
+    "ordinal": 1,
+    "task_group_id": "879b5824-44fb-4961-a127-1df04e90c8b2",
+    "parent_task_id": null,
+    "ai_result": null,
+    "id": "8fbdd119-bcb5-4d9c-b65e-7118cfb9b2cd",
+    "created_at": "2025-11-16T13:17:55.977237Z",
+    "user_id": "user_2yhesfpa5IDelC7UxShblIKQJIb",
+    "subtasks": []
+  },
+  {
+    "title": "Review and Refine README Content",
+    "description": "Edit and improve the README.md based on feedback from manual testing and peer review.",
+    "details": "Incorporate corrections or clarifications identified during setup validation. Refine language for clarity and conciseness. Ensure all code blocks, links, and formatting are correct. Optionally, request a peer review for further feedback.",
+    "status": "pending",
+    "test_strategy": "Re-review the updated README for accuracy, clarity, and completeness. Confirm that all feedback has been addressed and the document is ready for onboarding new developers.",
+    "priority": "medium",
+    "ordinal": 2,
+    "task_group_id": "879b5824-44fb-4961-a127-1df04e90c8b2",
+    "parent_task_id": null,
+    "ai_result": null,
+    "id": "45817c6a-204d-41b1-8db6-0904fb5f3cf3",
+    "created_at": "2025-11-16T13:17:55.977239Z",
+    "user_id": "user_2yhesfpa5IDelC7UxShblIKQJIb",
+    "subtasks": []
+  }
+]
